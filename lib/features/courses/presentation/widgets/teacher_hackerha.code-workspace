@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "teacher_hackerha",
+			"path": "../../../../.."
+		},
+		{
+			"name": "assets",
+			"path": "../../../../../../student_app/assets"
+		}
+	],
+	"settings": {}
+}
