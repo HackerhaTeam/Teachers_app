@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
+import 'package:teacher_hackerha/core/functions/navigation.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_borders.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/buttons/custom_button.dart';
+import 'package:teacher_hackerha/features/course%20detiles/presentation/pages/course_inforamtion.dart';
 import 'package:teacher_hackerha/features/courses/presentation/widgets/course%20card/course_price.dart';
 import 'package:teacher_hackerha/features/courses/presentation/widgets/course%20card/course_tags.dart';
 class CourseContent extends StatelessWidget {
@@ -56,9 +58,9 @@ class CourseContent extends StatelessWidget {
           SizedBox(height: 8),
           CustomButton(
             onPressed: () {
-              // context.navigateWithSlideTransition(
-              //   CourseInforamtion(),
-              // );
+              context.navigateWithSlideTransition(
+                CourseInforamtion(),
+              );
             },
             borderRadius: 12.r(context),
             color: border.primaryBrand,
