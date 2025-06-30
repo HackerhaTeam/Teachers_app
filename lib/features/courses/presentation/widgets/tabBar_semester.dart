@@ -1,3 +1,6 @@
+
+// ignore_for_file: deprecated_member_use, file_names
+
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';

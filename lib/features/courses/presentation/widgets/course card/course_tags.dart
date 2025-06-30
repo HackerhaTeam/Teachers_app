@@ -21,9 +21,9 @@ class CourseTags extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row (spacing:12.w(context) ,
       children: [
-        IconTextCourseContent(Icon: PhosphorIcons.circlesFour(), title: "دورة شاملة"),
-        IconTextCourseContent(Icon: PhosphorIcons.student (), title: "+55 طالب"),
-        IconTextCourseContent(Icon: PhosphorIcons.chalkboardTeacher(), title: "مدرّس واحد"),
+        IconTextCourseContent(icon: PhosphorIcons.circlesFour(), title: "دورة شاملة"),
+        IconTextCourseContent(icon: PhosphorIcons.student (), title: "+55 طالب"),
+        IconTextCourseContent(icon: PhosphorIcons.chalkboardTeacher(), title: "مدرّس واحد"),
       ],
     );
   }

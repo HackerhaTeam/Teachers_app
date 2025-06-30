@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/features/courses/presentation/widgets/courses_tab_page_body.dart';
+import 'package:teacher_hackerha/features/home/presentation/pages/account_tab_page.dart';
 import 'package:teacher_hackerha/features/home/presentation/pages/home_page_.dart';
 import 'package:teacher_hackerha/features/home/presentation/widgets/navbar/animated_navbar.dart';
 class MainNavigationPage extends StatefulWidget {
@@ -28,8 +29,8 @@ class _MainNavigationPageState extends State<MainNavigationPage>
       HomePage(),
       HomePage(),
       CoursesTabPageBody(),
-      HomePage(),
-      HomePage(),
+      AccountTabPage()
+     
       
     ];
   }

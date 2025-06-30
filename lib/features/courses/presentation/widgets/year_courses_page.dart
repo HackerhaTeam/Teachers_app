@@ -3,7 +3,7 @@ import 'package:teacher_hackerha/core/DI/service_locator.dart';
 import 'package:teacher_hackerha/core/Entities/course.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/features/courses/presentation/widgets/course%20card/course_list.dart';
-import 'package:teacher_hackerha/features/courses/presentation/widgets/tabBar_semester.dart';
+import 'package:teacher_hackerha/features/courses/presentation/widgets/tabbar_semester.dart';
 import 'package:teacher_hackerha/features/courses/presentation/widgets/year_page_header.dart';
 
 class YearCoursesPage extends StatefulWidget {

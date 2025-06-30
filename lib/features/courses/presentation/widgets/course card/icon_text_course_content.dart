@@ -6,15 +6,15 @@ import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 
 class IconTextCourseContent extends StatelessWidget {
   const IconTextCourseContent(
-      {super.key, required this.Icon, required this.title});
+      {super.key, required this.icon, required this.title});
 
-  final PhosphorIconData Icon;
+  final PhosphorIconData icon;
   final String title;
   @override
   Widget build(BuildContext context) {
     var content = Theme.of(context).extension<AppContent>()!;
     return Row(children: [
-      PhosphorIcon(Icon, size: 16.w(context),color:  content.secondary,),
+      PhosphorIcon(icon, size: 16.w(context),color:  content.secondary,),
       SizedBox(width: 2.w(context)),
       Text(
         title,

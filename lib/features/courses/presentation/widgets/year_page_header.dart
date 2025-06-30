@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/core/constants/assets_image.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
-import 'package:teacher_hackerha/core/functions/navigation.dart';
 import 'package:teacher_hackerha/core/helpers/tags/get_theme_icon.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
