@@ -42,9 +42,6 @@ class AppImages {
   static const String magnifyingGlass =
       'assets/images/svg/magnifying-glass.svg';
 
-
-
-
   static const String shareNetwork = 'assets/images/icons/share-network.svg';
 
   static const String eye = 'assets/images/icons/eye.svg';
@@ -68,8 +65,16 @@ class AppImages {
 
   static const String caretRight = 'assets/images/icons/caret-right.svg';
 
-  static const String bookmarkSimple = 'assets/images/icons/bookmark-simple.svg';
+  static const String dotsThreeVertical =
+      'assets/images/icons/dots-three-vertical.svg';
+
+  static const String playFill = 'assets/images/icons/play-fill.svg';
+
+  static const String studentFill = 'assets/images/icons/student-fill.svg';
+
+  static const String listChecks = 'assets/images/icons/list-checks.svg';
+
+  static const String bookmarkSimple =
+      'assets/images/icons/bookmark-simple.svg';
   static const String starFill = 'assets/images/icons/star-fill.svg';
-
-
 }
