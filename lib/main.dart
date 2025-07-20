@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:teacher_hackerha/core/DI/service_locator.dart';
 import 'package:teacher_hackerha/core/manager/tag_cubit/tag_cubit.dart';
 import 'package:teacher_hackerha/core/themes/app_theme.dart';
+import 'package:teacher_hackerha/features/auth/presentation/pages/log_in_pages/log_in_page.dart';
+import 'package:teacher_hackerha/features/auth/presentation/pages/sign_up_pages/sign_up_wrapper.dart';
 import 'package:teacher_hackerha/features/home/presentation/widgets/navbar/main_navigation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
-        home: const MainNavigationPage(),
+        home: const LogInPage(),
       ),
     );
   }
