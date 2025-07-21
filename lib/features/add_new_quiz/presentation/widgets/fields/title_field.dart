@@ -1,35 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/widgets/text_field/custom_text_field.dart';
-import 'package:teacher_hackerha/core/widgets/text_field/field_validators.dart';
 
-class DayField extends StatelessWidget {
-  const DayField({
+import '../../../../../core/widgets/text_field/field_validators.dart';
+
+class TitleField extends StatelessWidget {
+  const TitleField({
     super.key,
-    required this.dayController,
+    required this.titleController,
     required this.focusNode,
     this.onChanged,
     this.onSubmitted,
-    required this.dayKey,
-    required this.daySubmitted,
+    required this.titleKey,
+    required this.titleSubmitted,
   });
 
-  final TextEditingController dayController;
+  final TextEditingController titleController;
   final FocusNode focusNode;
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
-  final GlobalKey<FormState> dayKey;
-  final bool daySubmitted;
+  final GlobalKey<FormState> titleKey;
+  final bool titleSubmitted;
+
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: dayKey,
+      key: titleKey,
       autovalidateMode:
-          daySubmitted
+          titleSubmitted
               ? AutovalidateMode.onUserInteraction
               : AutovalidateMode.disabled,
       child: SizedBox(
-        width: 115.w(context),
+        width: 364.w(context),
         height: 59,
         child: Center(
           child: CustomTextField(
@@ -37,10 +39,11 @@ class DayField extends StatelessWidget {
             onChanged: onChanged,
             focusNode: focusNode,
             keyboardType: TextInputType.number,
-            fieldType: FieldType.day,
-            label: "اليوم",
+            fieldType: FieldType.title,
+            label: "عنوان الاختبار",
+
             radius: 8.r(context),
-            controller: dayController,
+            controller: titleController,
           ),
         ),
       ),

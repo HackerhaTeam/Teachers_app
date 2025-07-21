@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:teacher_hackerha/core/DI/service_locator.dart';
 import 'package:teacher_hackerha/core/manager/tag_cubit/tag_cubit.dart';
 import 'package:teacher_hackerha/core/themes/app_theme.dart';
+import 'package:teacher_hackerha/features/add_new_quiz/presentation/pages/add_new_quiz_page.dart';
 import 'package:teacher_hackerha/features/auth/presentation/pages/log_in_pages/log_in_page.dart';
 import 'package:teacher_hackerha/features/auth/presentation/pages/sign_up_pages/sign_up_wrapper.dart';
 import 'package:teacher_hackerha/features/home/presentation/widgets/navbar/main_navigation.dart';
@@ -34,8 +35,8 @@ class MyApp extends StatelessWidget {
         supportedLocales: [const Locale('ar', ''), const Locale('en', '')],
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
-        darkTheme: AppTheme.dark,
-        home: const LogInPage(),
+        darkTheme: AppTheme.light,
+        home: const NewQuizPage(),
       ),
     );
   }

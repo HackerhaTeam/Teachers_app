@@ -17,24 +17,15 @@ class IntroductionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     // final content = Theme.of(context).extension<AppContent>()!;
     return Padding(
-      padding: EdgeInsets.only(top: 26, bottom: 8),
+      padding: EdgeInsets.only(top: 34, bottom: 8),
       child: Row(
         children: [
-          // Container(
-          //   height: 44.w(context),
-          //   width: 44.w(context),
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(16.r(context)),
-          //       color: content.brandPrimary),
-          //   child: Center(
-          //     child: Directionality(
-          //       textDirection: TextDirection.ltr,
-          //       child: PhosphorIcon(
-          //           color: content.primaryInverted, size: 24.w(context), icon),
-          //     ),
-          //   ),
-          // ),
-          RoundedSquareIcon(icon: icon, size: 24.w(context)),
+          RoundedSquareIcon(
+            iconSize: 24.s(context),
+            icon: icon,
+            size: 44.s(context),
+          ),
+          SizedBox(width: 16),
           Text(introText, style: context.xHeadingXLarge),
         ],
       ),
