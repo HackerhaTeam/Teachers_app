@@ -12,6 +12,7 @@ class CustomCard extends StatelessWidget {
     this.padding,
     this.margin,
     this.alignment,
+    this.thicknessBorder,
   });
   final Widget? child;
   final Color? backgroundColor;
@@ -22,6 +23,7 @@ class CustomCard extends StatelessWidget {
   final double borderRadius;
   final AlignmentGeometry? alignment;
   final EdgeInsetsGeometry? margin;
+  final double? thicknessBorder;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +33,7 @@ class CustomCard extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           color: borderColor ?? Colors.transparent,
-          width: borderColor != null ? 1 : 0,
+          width: thicknessBorder ?? 1,
         ),
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
