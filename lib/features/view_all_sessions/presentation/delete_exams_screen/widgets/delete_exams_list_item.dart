@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:teacher_hackerha/core/constants/assets_image.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
@@ -34,10 +33,9 @@ class DeleteExamsListItem extends StatelessWidget {
         padding: EdgeInsets.only(bottom: 8.h(context)),
         child: Row(
           children: [
-            if (isSelected) ...[
-              const CustomCheckBox(),
-              SizedBox(width: 8.h(context)),
-            ],
+             CustomCheckBox(isSelected: isSelected),
+
+            SizedBox(width: 8.h(context)),
             Expanded(
               child: ListTileCard(
                 childOfRoundedSquareShape: PhosphorIcon(

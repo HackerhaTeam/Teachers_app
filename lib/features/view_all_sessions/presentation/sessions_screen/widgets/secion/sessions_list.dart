@@ -6,8 +6,8 @@ import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/list_tile_card.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/sessions_screen/manager/sessions_list_cubit/sessions_list_cubit.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/sessions_screen/manager/sessions_list_cubit/sessions_list_state.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/manager/sessions_list_cubit/sessions_list_cubit.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/manager/sessions_list_cubit/sessions_list_state.dart';
 
 class SessionsList extends StatelessWidget {
   const SessionsList({super.key});

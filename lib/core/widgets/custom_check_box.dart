@@ -4,8 +4,8 @@ import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_borders.dart';
 
 class CustomCheckBox extends StatelessWidget {
-  const CustomCheckBox({super.key});
-
+  const CustomCheckBox({super.key, required this.isSelected});
+final bool isSelected;
   @override
   Widget build(BuildContext context) {
     final bgColor = Theme.of(context).extension<AppBackgrounds>()!;
@@ -21,6 +21,7 @@ class CustomCheckBox extends StatelessWidget {
           border: Border.all(color: borderColor.primary),
           radius: 8.r(context),
         ),
+        if(isSelected)
         checkContainer(
           width: 16.w(context),
           height: 16.w(context),
