@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/manager/sessions_list_cubit/sessions_list_cubit.dart';
-import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/secion/sessions_content.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/sessions_content.dart';
 
 class SessionsPage extends StatelessWidget {
   const SessionsPage({super.key});

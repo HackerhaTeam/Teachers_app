@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
-import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/secion/sessions_footer.dart';
-import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/secion/sessions_header.dart';
-import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/secion/sessions_list.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/sessions_footer.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/sessions_header.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/widgets/sessions_list.dart';
 import 'package:teacher_hackerha/features/view_all_sessions/presentation/shared/widgets/sessions_feature_body.dart';
 
 class SessionsContent extends StatelessWidget {
