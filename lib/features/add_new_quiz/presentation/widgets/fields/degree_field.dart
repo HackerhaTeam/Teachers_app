@@ -13,6 +13,8 @@ class DegreeField extends StatelessWidget {
     this.onSubmitted,
     required this.degreeKey,
     required this.degreeSubmitted,
+    this.width,
+    required this.title,
   });
 
   final TextEditingController degreeController;
@@ -21,7 +23,8 @@ class DegreeField extends StatelessWidget {
   final void Function(String)? onSubmitted;
   final GlobalKey<FormState> degreeKey;
   final bool degreeSubmitted;
-
+  final String title;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -31,7 +34,7 @@ class DegreeField extends StatelessWidget {
               ? AutovalidateMode.onUserInteraction
               : AutovalidateMode.disabled,
       child: SizedBox(
-        width: 175.w(context),
+        width: width ?? 175.w(context),
         height: 59,
         child: Center(
           child: CustomTextField(
@@ -40,7 +43,7 @@ class DegreeField extends StatelessWidget {
             focusNode: focusNode,
             keyboardType: TextInputType.number,
             fieldType: FieldType.degree,
-            label: "درجة الامتحان الكلية",
+            label: title,
 
             radius: 8.r(context),
             controller: degreeController,

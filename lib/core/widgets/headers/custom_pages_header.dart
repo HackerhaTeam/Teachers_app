@@ -10,19 +10,20 @@ class CustomPagesHeader extends StatelessWidget {
   const CustomPagesHeader({
     super.key,
     required double progress,
-    required this.backgrounds,
+
     required this.onBack,
     required this.currentPage,
     required this.isAuth,
   }) : _progress = progress;
 
   final double _progress;
-  final AppBackgrounds backgrounds;
+
   final int currentPage;
   final VoidCallback onBack;
   final bool isAuth;
   @override
   Widget build(BuildContext context) {
+    final backgrounds = Theme.of(context).extension<AppBackgrounds>()!;
     final primaryColor = backgrounds.primaryBrand;
     String headerText = "";
     if (isAuth) {
@@ -40,10 +41,12 @@ class CustomPagesHeader extends StatelessWidget {
         headerText = "حماية وأمان حسابك";
       }
     } else {
-      if (currentPage == 0) {
-        headerText = "توضيحات وشروط هامة";
-      } else if (currentPage == 1) {
-        headerText = "تفعيل الدورة";
+      if (currentPage == 0 || currentPage == 1) {
+        headerText = "إعدادات السؤال";
+      } else if (currentPage == 2) {
+        headerText = "محتوى السؤال";
+      } else if (currentPage == 3) {
+        headerText = "إعداد خيارات الإجابة";
       }
     }
 
@@ -51,19 +54,10 @@ class CustomPagesHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         SizedBox(width: 20.w(context)),
-        CustomCircleIcon(
-          circleSize: 44.s(context),
-          backgroundColor: backgrounds.onSurfaceSecondary,
-          onTap: () {
-            FocusScope.of(context).unfocus();
-            onBack();
-          },
-          iconAsset: getThemeIcon(
-            context,
-            AppImages.carretRightDark,
-            AppImages.carretRightLight,
-          ),
-          iconSize: 24.s(context),
+        HeaderIconButton(
+          onTap: onBack,
+          iconDark: AppImages.carretRightDark,
+          iconLight: AppImages.carretRightLight,
         ),
         SizedBox(width: 28.w(context)),
         Center(
@@ -95,6 +89,13 @@ class CustomPagesHeader extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(width: 28.w(context)),
+        if (isAuth == false)
+          HeaderIconButton(
+            onTap: () {},
+            iconDark: AppImages.xDark,
+            iconLight: AppImages.xLight,
+          ),
       ],
     );
   }
@@ -103,6 +104,36 @@ class CustomPagesHeader extends StatelessWidget {
     return BoxDecoration(
       color: color,
       borderRadius: BorderRadius.circular(40.r(context)),
+    );
+  }
+}
+
+class HeaderIconButton extends StatelessWidget {
+  const HeaderIconButton({
+    super.key,
+    required this.onTap,
+    required this.iconDark,
+    required this.iconLight,
+  });
+
+  final VoidCallback onTap;
+  final String iconDark;
+  final String iconLight;
+  @override
+  Widget build(BuildContext context) {
+    final backgrounds = Theme.of(context).extension<AppBackgrounds>()!;
+    return Padding(
+      padding: EdgeInsets.only(top: 7),
+      child: CustomCircleIcon(
+        circleSize: 44.s(context),
+        backgroundColor: backgrounds.onSurfaceSecondary,
+        onTap: () {
+          FocusScope.of(context).unfocus();
+          onTap();
+        },
+        iconAsset: getThemeIcon(context, iconDark, iconLight),
+        iconSize: 24.s(context),
+      ),
     );
   }
 }

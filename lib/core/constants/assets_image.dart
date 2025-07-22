@@ -39,11 +39,9 @@ class AppImages {
       'assets/images/svg/caret-right-light.svg';
   static const String carretRightDark =
       'assets/images/svg/caret-right-dark.svg';
-  static const String magnifyingGlass =
-      'assets/images/svg/magnifying-glass.svg';
 
-
-
+  static const String nullQuizLight = 'assets/images/svg/nullquiz_light.svg';
+  static const String nullQuizDark = 'assets/images/svg/nullquiz_dark.svg';
 
   static const String shareNetwork = 'assets/images/icons/share-network.svg';
 
@@ -58,7 +56,8 @@ class AppImages {
 
   static const String video = 'assets/images/icons/video.svg';
 
-  static const String x = 'assets/images/icons/x.svg';
+  static const String xLight = 'assets/images/icons/x_light.svg';
+  static const String xDark = 'assets/images/icons/x_dark.svg';
 
   static const String check = 'assets/images/icons/check.svg';
 
@@ -68,8 +67,7 @@ class AppImages {
 
   static const String caretRight = 'assets/images/icons/caret-right.svg';
 
-  static const String bookmarkSimple = 'assets/images/icons/bookmark-simple.svg';
+  static const String bookmarkSimple =
+      'assets/images/icons/bookmark-simple.svg';
   static const String starFill = 'assets/images/icons/star-fill.svg';
-
-
 }

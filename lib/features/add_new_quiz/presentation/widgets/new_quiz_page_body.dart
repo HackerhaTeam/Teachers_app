@@ -8,10 +8,10 @@ import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/buttons/floating_next_button.dart';
 import 'package:teacher_hackerha/core/widgets/headers/introduction_header.dart';
+import 'package:teacher_hackerha/features/add_new_quiz/presentation/pages/quiz_details_page.dart';
 import 'package:teacher_hackerha/features/add_new_quiz/presentation/widgets/fields/degree_field.dart';
 import 'package:teacher_hackerha/features/add_new_quiz/presentation/widgets/fields/duration_field.dart';
 import 'package:teacher_hackerha/features/add_new_quiz/presentation/widgets/fields/title_field.dart';
-import 'package:teacher_hackerha/features/home/presentation/widgets/navbar/main_navigation.dart';
 
 import '../../../../core/widgets/custom_circle_icon.dart';
 
@@ -68,7 +68,9 @@ class _NewQuizPageBodyState extends State<NewQuizPageBody> {
               durationValidate &&
               titleValidate &&
               isFormValid) {
-            context.navigateWithSlideTransition(MainNavigationPage());
+            context.navigateWithSlideTransition(
+              QuizDetailsPage(degree: degreeController.text),
+            );
           }
         },
       ),
@@ -114,11 +116,13 @@ class _NewQuizPageBodyState extends State<NewQuizPageBody> {
                     DegreeField(
                       onSubmitted: (p0) {
                         durationFocusNode.requestFocus();
+                        degreeController.text = p0;
                       },
                       degreeController: degreeController,
                       focusNode: degreeFocusNode,
                       degreeKey: degreeKey,
                       degreeSubmitted: degreeSubmitted,
+                      title: "درجة الامتحان الكلية",
                     ),
                     SizedBox(width: 8),
                     DurationField(
@@ -138,6 +142,7 @@ class _NewQuizPageBodyState extends State<NewQuizPageBody> {
                   focusNode: titleFocusNode,
                   titleKey: titleKey,
                   titleSubmitted: titleSubmitted,
+                  title: 'عنوان الاختبار',
                 ),
               ],
             ),

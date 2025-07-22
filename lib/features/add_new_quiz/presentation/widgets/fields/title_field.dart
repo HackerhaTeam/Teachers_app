@@ -13,6 +13,7 @@ class TitleField extends StatelessWidget {
     this.onSubmitted,
     required this.titleKey,
     required this.titleSubmitted,
+    required this.title,
   });
 
   final TextEditingController titleController;
@@ -21,7 +22,7 @@ class TitleField extends StatelessWidget {
   final void Function(String)? onSubmitted;
   final GlobalKey<FormState> titleKey;
   final bool titleSubmitted;
-
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -31,16 +32,16 @@ class TitleField extends StatelessWidget {
               ? AutovalidateMode.onUserInteraction
               : AutovalidateMode.disabled,
       child: SizedBox(
-        width: 364.w(context),
+        width: 361.w(context),
         height: 59,
         child: Center(
           child: CustomTextField(
             onFieldSubmitted: onSubmitted,
             onChanged: onChanged,
             focusNode: focusNode,
-            keyboardType: TextInputType.number,
+
             fieldType: FieldType.title,
-            label: "عنوان الاختبار",
+            label: title,
 
             radius: 8.r(context),
             controller: titleController,

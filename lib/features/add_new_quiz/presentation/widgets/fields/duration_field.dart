@@ -37,7 +37,7 @@ class DurationField extends StatelessWidget {
             onFieldSubmitted: onSubmitted,
             onChanged: onChanged,
             focusNode: focusNode,
-
+            keyboardType: TextInputType.number,
             fieldType: FieldType.duration,
             label: "مدة الامتحان",
             radius: 8.r(context),

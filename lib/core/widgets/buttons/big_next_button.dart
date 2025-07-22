@@ -6,14 +6,15 @@ import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/buttons/custom_button.dart';
 
-class BigNextButton extends StatelessWidget {
-  const BigNextButton({
+class BigFloatButton extends StatelessWidget {
+  const BigFloatButton({
     super.key,
     required this.value,
     required this.onPressed,
     this.text,
+    required this.showCarret,
   });
-
+  final bool showCarret;
   final bool value;
   final String? text;
   final void Function() onPressed;
@@ -37,14 +38,14 @@ class BigNextButton extends StatelessWidget {
             text ?? "التالي",
             style: context.xLabelLarge.copyWith(
               color: content.brandDisabledPrimary,
-              fontWeight: FontWeight.w500,
             ),
           ),
-          PhosphorIcon(
-            PhosphorIcons.caretRight(),
-            size: 16.w(context),
-            color: content.brandDisabledPrimary,
-          ),
+          if (showCarret)
+            PhosphorIcon(
+              PhosphorIcons.caretRight(),
+              size: 16.w(context),
+              color: content.brandDisabledPrimary,
+            ),
         ],
       ),
     );

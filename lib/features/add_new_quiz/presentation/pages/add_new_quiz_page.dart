@@ -6,6 +6,6 @@ class NewQuizPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: NewQuizPageBody());
+    return NewQuizPageBody();
   }
 }

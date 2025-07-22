@@ -34,7 +34,7 @@ class _SignUpPage4BodyState extends State<SignUpPage2Body> {
   bool monthSubmitted = false;
   bool yearSubmitted = false;
   bool genderSubmitted = false;
-  String? selectedMonth;
+
   String? selectedGender;
   @override
   void initState() {

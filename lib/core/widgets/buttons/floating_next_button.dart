@@ -38,7 +38,7 @@ class FloatingNextButton extends StatelessWidget {
         children: [
           Text(
             buttonText ?? "التالي",
-            style: styles.xLabelLarge.copyWith(
+            style: styles.xLabelMedium.copyWith(
               color: content.brandDisabledPrimary,
             ),
           ),
