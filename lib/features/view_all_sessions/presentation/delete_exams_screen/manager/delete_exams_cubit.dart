@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/manager/delete_exams_state.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/manager/delete_exams_state.dart';
 
 class DeleteExamsCubit extends Cubit<DeleteExamsState> {
   DeleteExamsCubit({required this.items})

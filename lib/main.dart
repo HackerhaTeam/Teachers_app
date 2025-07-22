@@ -6,7 +6,8 @@ import 'package:teacher_hackerha/core/DI/service_locator.dart';
 import 'package:teacher_hackerha/core/manager/tag_cubit/tag_cubit.dart';
 import 'package:teacher_hackerha/core/themes/app_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/sessions_screen/pages/sessions_page.dart';
+import 'package:teacher_hackerha/features/student/presentation/pages/student_page.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/pages/sessions_page.dart';
 
 void main() {
   setupDependencies();
@@ -23,8 +24,8 @@ class MyApp extends StatelessWidget {
       create: (context) => TagCubit(),
       child: MaterialApp(
         useInheritedMediaQuery: true,
-        locale: Locale('ar'),
-        localizationsDelegates: [
+        locale: Locale('ar'), 
+        localizationsDelegates: [ 
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
-        home: const SessionsPage()
+        home: const StudentPage(isGeneralPage: true)
 
       ),
     );

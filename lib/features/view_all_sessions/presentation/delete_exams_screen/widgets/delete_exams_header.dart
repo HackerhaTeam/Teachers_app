@@ -7,8 +7,8 @@ import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/custom_circle_icon.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/manager/delete_exams_cubit.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/manager/delete_exams_state.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/manager/delete_exams_cubit.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/manager/delete_exams_state.dart';
 
 class DeleteExamsHeader extends StatelessWidget {
   const DeleteExamsHeader({super.key});

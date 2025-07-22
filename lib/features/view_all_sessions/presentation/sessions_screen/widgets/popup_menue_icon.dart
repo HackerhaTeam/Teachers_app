@@ -5,10 +5,10 @@ import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/custom_circle_icon.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/pages/delete_exams_page.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/reorder_sessions_screen/pages/reorder_sessions_page.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/sessions_screen/helpers/get_menue_width.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/sessions_screen/manager/sessions_list_cubit/sessions_list_cubit.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/pages/delete_exams_page.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/reorder_sessions_screen/pages/reorder_sessions_page.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/helpers/get_menue_width.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/sessions_screen/manager/sessions_list_cubit/sessions_list_cubit.dart';
 
 class PopupMenueIcon extends StatelessWidget {
   const PopupMenueIcon({super.key, required this.cubit});

@@ -1,11 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/manager/delete_exams_cubit.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/widgets/delete_exams_header.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/widgets/delete_exams_list.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/shared/widgets/confirm_changes_footer.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/shared/widgets/sessions_feature_body.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/manager/delete_exams_cubit.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/widgets/delete_exams_header.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/widgets/delete_exams_list.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/shared/widgets/confirm_changes_footer.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/shared/widgets/sessions_feature_body.dart';
 
 class DeleteExamsContent extends StatelessWidget {
   const DeleteExamsContent({super.key});

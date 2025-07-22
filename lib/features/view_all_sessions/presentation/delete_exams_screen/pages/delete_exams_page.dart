@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/manager/delete_exams_cubit.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/delete_exams_screen/widgets/delete_exams_content.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/manager/delete_exams_cubit.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/delete_exams_screen/widgets/delete_exams_content.dart';
 
 class DeleteExamsPage extends StatelessWidget {
   const DeleteExamsPage({super.key, required this.items});

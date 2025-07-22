@@ -7,9 +7,9 @@ import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/list_tile_card.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/reorder_sessions_screen/manager/reorder_sessions_list_cubit/reorder_sessions_list_cubit.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/reorder_sessions_screen/manager/reorder_sessions_list_cubit/reorder_sessions_list_state.dart';
-import 'package:teacher_hackerha/features/sessions/presentation/reorder_sessions_screen/widgets/long_pointer_listener.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/reorder_sessions_screen/manager/reorder_sessions_list_cubit/reorder_sessions_list_cubit.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/reorder_sessions_screen/manager/reorder_sessions_list_cubit/reorder_sessions_list_state.dart';
+import 'package:teacher_hackerha/features/view_all_sessions/presentation/reorder_sessions_screen/widgets/long_pointer_listener.dart';
 
 class ReorderSessionsList extends StatelessWidget {
   const ReorderSessionsList({super.key});
