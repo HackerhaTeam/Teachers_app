@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         supportedLocales: [const Locale('ar', ''), const Locale('en', '')],
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
-        darkTheme: AppTheme.dark,
+        darkTheme: AppTheme.light,
         home: QuestionPage(),
       ),
     );

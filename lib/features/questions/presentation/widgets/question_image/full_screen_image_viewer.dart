@@ -1,7 +1,8 @@
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
+import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/features/questions/presentation/manager/quesiton_image_cubit.dart';
 import 'package:teacher_hackerha/features/questions/presentation/model/question_image_details.dart';
 import 'package:teacher_hackerha/features/questions/presentation/widgets/question_image/pointer_event_listener.dart';
@@ -37,6 +38,8 @@ class _FullScreenImageViewerState extends State<FullScreenImageViewer> {
 
   @override
   Widget build(BuildContext context) {
+    final bgColor = Theme.of(context).extension<AppBackgrounds>()!;
+
     return WillPopScope(
       onWillPop: () async {
         context.read<QuestionImageCubit>().restartObacityValue();
@@ -50,18 +53,27 @@ class _FullScreenImageViewerState extends State<FullScreenImageViewer> {
               return PointerEventListener(
                 onPointerDown: context.read<QuestionImageCubit>().onPointerDown,
                 onPointerUp: context.read<QuestionImageCubit>().onPointerUp,
-                onPointerCancel: context.read<QuestionImageCubit>().onPointerCancel,
+                onPointerCancel:
+                    context.read<QuestionImageCubit>().onPointerCancel,
                 child: Container(
-                 color: Colors.black.withAlpha((state.opacity * 255).round()),
+                  color: bgColor.surfacePrimary.withAlpha(
+                    (state.opacity * 255).round(),
+                  ),
                   child: Stack(
                     children: [
                       QuestionImageView(
                         imagePath: widget.imagePath,
                         dragVerticalPosition: state.dragVerticalPosition,
                       ),
-                      if (state.showZoom) const QuestionImageZoomIndicator(),
-                      if (_enableDrag(state))
-                        const QuestionImageDragHandler(),
+                      if (state.showZoom)
+                        Positioned(
+                          bottom: 24.h(context),
+                          left: 0,
+                          right: 0,
+                          child: QuestionImageZoomIndicator(),
+                        ),
+
+                      if (_enableDrag(state)) const QuestionImageDragHandler(),
                     ],
                   ),
                 ),
