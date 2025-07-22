@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/course_students/course_student_extra_details.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/general_students/general_students_extra_details.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/course_students/course_student_extra_details.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/general_students/general_students_extra_details.dart';
 
 class StudentListItemContent extends StatelessWidget {
   const StudentListItemContent({

@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:teacher_hackerha/features/student/presentation/manager/student_list_state.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/manager/student_list_state.dart';
 
 class StudentListCubit extends Cubit<StudentListState> {
   StudentListCubit() : super(StudentListInitialState());

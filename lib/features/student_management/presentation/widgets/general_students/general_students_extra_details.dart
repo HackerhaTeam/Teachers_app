@@ -4,9 +4,9 @@ import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_borders.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
-import 'package:teacher_hackerha/features/student/presentation/manager/student_list_cubit.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/general_students/general_student_phone_row.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/general_students/general_student_subjects.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/manager/student_list_cubit.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/general_students/general_student_phone_row.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/general_students/general_student_subjects.dart';
 
 class GeneralStudentsExtraDetails extends StatelessWidget {
   final int index;

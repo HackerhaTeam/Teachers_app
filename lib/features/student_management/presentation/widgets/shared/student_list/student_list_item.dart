@@ -3,8 +3,8 @@ import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_borders.dart';
 import 'package:teacher_hackerha/core/widgets/custom_card.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/shared/student_list/student_list_item_content.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/shared/student_list/student_list_item_header.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/shared/student_list/student_list_item_content.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/shared/student_list/student_list_item_header.dart';
 
 class StudentListItem extends StatelessWidget {
   const StudentListItem({

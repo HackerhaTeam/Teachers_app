@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_borders.dart';
-import 'package:teacher_hackerha/features/student/presentation/manager/student_list_cubit.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/course_students/remove_student_from_course_button.dart';
-import 'package:teacher_hackerha/features/student/presentation/widgets/course_students/course_student_details_row.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/manager/student_list_cubit.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/course_students/course_student_details_row.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/widgets/course_students/remove_student_from_course_button.dart';
 class CourseStudnetExraDetails extends StatelessWidget {
   final int index;
   const CourseStudnetExraDetails({super.key, required this.index});

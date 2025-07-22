@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/custom_circle_icon.dart';
-import 'package:teacher_hackerha/features/student/presentation/manager/student_list_cubit.dart';
+import 'package:teacher_hackerha/features/student_management/presentation/manager/student_list_cubit.dart';
 
 class StudentListItemHeader extends StatelessWidget {
   final int index;
