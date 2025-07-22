@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/core/constants/assets_image.dart';
+import 'package:teacher_hackerha/core/functions/get_menue_width.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/widgets/custom_circle_icon.dart';
-import 'package:teacher_hackerha/core/functions/get_menue_width.dart';
 
 class PopupMenuIcon extends StatelessWidget {
   const PopupMenuIcon({
@@ -52,6 +52,8 @@ class PopupMenuIcon extends StatelessWidget {
     final position = _calculateMenuPosition(context, menuWidth);
 
     final selected = await showMenu<String>(
+      elevation: 0,
+      constraints: BoxConstraints(minWidth: 200.w(context)),
       context: context,
       position: position,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:teacher_hackerha/core/functions/custom_popup_menue_item.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/popup_menue_icon.dart';
@@ -17,11 +17,15 @@ class SesstionsPopMenuIcon extends StatelessWidget {
 
     return PopupMenuIcon(
       items: [
-        PopupMenuItem(
+      
+        customPopupMenuItem(
+          context: context,
           value: 'reorder',
           child: Text('إعادة ترتيب الدورة', style: context.xLabelLarge),
         ),
-        PopupMenuItem(
+
+        customPopupMenuItem(
+          context: context,
           value: 'delete',
           child: Text(
             'حذف اختبارات',
