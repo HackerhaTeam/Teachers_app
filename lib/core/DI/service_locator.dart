@@ -1,3 +1,4 @@
+
 import 'package:get_it/get_it.dart';
 import 'package:teacher_hackerha/core/Entities/course.dart';
 import 'package:teacher_hackerha/core/Entities/student.dart';
@@ -168,4 +169,36 @@ void setupDependencies() {
   locator.registerFactoryParam<Student, void, void>((_, __) => student1);
 
   locator.registerFactory<List<Course>>(() => courses);
+  
+
+
 }
+// final sl = GetIt.instance;
+// void init() {
+//   // Dio & Interceptor
+//   sl.registerLazySingleton<Dio>(() {
+//     final dio = Dio();
+//     dio.interceptors.add(sl<ApiInterceptor>());
+//     return dio;
+//   });
+
+//   sl.registerLazySingleton<ApiInterceptor>(() => ApiInterceptor());
+
+  // // Data Source
+  // sl.registerLazySingleton<TopTeacherDataSourse>(
+  //   () => TopTeacherDataSourse(sl()),
+  // );
+
+  // Repository
+//   sl.registerLazySingleton<TopTeacherRepositories>(
+//   () => TopTeacherRepsiotiesImpl(sl()),
+// );
+
+
+  // Use Case
+//   sl.registerLazySingleton<TopTeacherUsecase>(() => TopTeacherUsecase(sl()));
+
+//   // Cubit
+//   sl.registerFactory<TopTeacherCubit>(() => TopTeacherCubit(sl()));
+// }
+                                                                                                                                                                                                                        

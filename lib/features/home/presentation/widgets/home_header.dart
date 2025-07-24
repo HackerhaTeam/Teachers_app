@@ -49,8 +49,9 @@ class _HomeHeaderState extends State<HomeHeader>
           Builder(builder: (context) {
             return GestureDetector(
               onTap: () {
-                iconTaped();
+              
                 Scaffold.of(context).openDrawer();
+         iconTaped();
               },
               child: AnimatedIcon(
                   icon: AnimatedIcons.menu_close,

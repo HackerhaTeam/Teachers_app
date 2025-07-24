@@ -13,9 +13,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+      var scaffoldKey = GlobalKey<ScaffoldState>();
     return BlocProvider(create: (BuildContext context) { 
       return ChangeIconCubit()..initController(this);
      },
-    child: Scaffold(body: HomePageBody(),));
+    child: HomePageBody(key: scaffoldKey,));
   }
 }

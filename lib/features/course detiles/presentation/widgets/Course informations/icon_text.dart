@@ -9,27 +9,28 @@ class IconText extends StatelessWidget {
     super.key,
     required this.icon,
 
-    required this.title, this.mainAxisAlignment,
+    required this.title, this.mainAxisAlignment,  this.iconColor,
   });
 
   final PhosphorIconData icon;
   final MainAxisAlignment? mainAxisAlignment;
   
   final String title;
-
+final Color? iconColor;
   @override
   Widget build(BuildContext context) {
     final content = Theme.of(context).extension<AppContent>()!;
     
+    var secondary = content.secondary;
     return Row(mainAxisAlignment:mainAxisAlignment??MainAxisAlignment.center,
       children: [
         PhosphorIcon(
           icon,
           size: 16.w(context),
-          color: content.secondary,
+          color: iconColor??secondary,
         ),
         SizedBox(
-          width: 4.w(context),
+          width: 6.w(context),
         ),
         Text(
           title,
