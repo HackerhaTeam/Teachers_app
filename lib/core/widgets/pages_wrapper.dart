@@ -3,6 +3,7 @@ import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/widgets/headers/custom_pages_header.dart';
 import 'package:teacher_hackerha/features/add_new_quiz/presentation/pages/new_quistion_pages/new_quistion_page1.dart';
+import 'package:teacher_hackerha/features/add_new_quiz/presentation/pages/new_quistion_pages/new_quistion_page2.dart';
 import 'package:teacher_hackerha/features/auth/presentation/pages/sign_up_pages/sign_up_page1.dart';
 import 'package:teacher_hackerha/features/auth/presentation/pages/sign_up_pages/sign_up_page2.dart';
 import 'package:teacher_hackerha/features/auth/presentation/pages/sign_up_pages/sign_up_page3.dart';
@@ -28,7 +29,10 @@ class _PagesWrapperState extends State<PagesWrapper> {
         const VerificationPage(isSignIn: false),
       ];
     } else {
-      return [NewQuistionPage1(onNext: _goToNextPage)];
+      return [
+        NewQuistionPage1(onNext: _goToNextPage),
+        NewQuistionPage2(onNext: _goToNextPage),
+      ];
     }
   }
 

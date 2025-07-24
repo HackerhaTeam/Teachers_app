@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_hackerha/core/constants/assets_image.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
+import 'package:teacher_hackerha/core/functions/navigation.dart';
 import 'package:teacher_hackerha/core/helpers/tags/get_theme_icon.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
 import 'package:teacher_hackerha/core/themes/typoGraphy/app_text_styles.dart';
 import 'package:teacher_hackerha/core/widgets/custom_circle_icon.dart';
+import 'package:teacher_hackerha/features/add_new_quiz/presentation/pages/add_new_quiz_page.dart';
+import 'package:teacher_hackerha/features/add_new_quiz/presentation/widgets/dialog/show_quistion_dialog.dart';
 
 class CustomPagesHeader extends StatelessWidget {
   const CustomPagesHeader({
@@ -55,7 +58,10 @@ class CustomPagesHeader extends StatelessWidget {
       children: [
         SizedBox(width: 20.w(context)),
         HeaderIconButton(
-          onTap: onBack,
+          onTap: () {
+            onBack();
+            FocusScope.of(context).unfocus();
+          },
           iconDark: AppImages.carretRightDark,
           iconLight: AppImages.carretRightLight,
         ),
@@ -92,7 +98,14 @@ class CustomPagesHeader extends StatelessWidget {
         SizedBox(width: 28.w(context)),
         if (isAuth == false)
           HeaderIconButton(
-            onTap: () {},
+            onTap: () {
+              showQuistionDialog(
+                context: context,
+                onLeftPressed: () {
+                  context.navigateWithSlideTransition(NewQuizPage());
+                },
+              );
+            },
             iconDark: AppImages.xDark,
             iconLight: AppImages.xLight,
           ),
@@ -128,7 +141,6 @@ class HeaderIconButton extends StatelessWidget {
         circleSize: 44.s(context),
         backgroundColor: backgrounds.onSurfaceSecondary,
         onTap: () {
-          FocusScope.of(context).unfocus();
           onTap();
         },
         iconAsset: getThemeIcon(context, iconDark, iconLight),

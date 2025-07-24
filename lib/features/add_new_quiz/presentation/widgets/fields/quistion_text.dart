@@ -4,47 +4,50 @@ import 'package:teacher_hackerha/core/widgets/text_field/custom_text_field.dart'
 
 import '../../../../../core/widgets/text_field/field_validators.dart';
 
-class TitleField extends StatelessWidget {
-  const TitleField({
+class QuistionTextField extends StatelessWidget {
+  const QuistionTextField({
     super.key,
-    required this.titleController,
+    required this.quistionController,
     required this.focusNode,
     this.onChanged,
     this.onSubmitted,
-    required this.titleKey,
-    required this.titleSubmitted,
-    required this.title,
+    this.quistionKey,
+    required this.quistionSubmitted,
+    this.enabled,
+    this.hint,
   });
 
-  final TextEditingController titleController;
+  final TextEditingController quistionController;
   final FocusNode focusNode;
   final void Function(String)? onChanged;
   final void Function(String)? onSubmitted;
-  final GlobalKey<FormState> titleKey;
-  final bool titleSubmitted;
-  final String title;
+  final GlobalKey<FormState>? quistionKey;
+  final bool quistionSubmitted;
+  final bool? enabled;
+  final String? hint;
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: titleKey,
+      key: quistionKey,
       autovalidateMode:
-          titleSubmitted
+          quistionSubmitted
               ? AutovalidateMode.onUserInteraction
               : AutovalidateMode.disabled,
       child: SizedBox(
-        width: 358.w(context),
+        width: 361.w(context),
         height: 59,
         child: Center(
           child: CustomTextField(
+            enabled: enabled,
             onFieldSubmitted: onSubmitted,
             onChanged: onChanged,
             focusNode: focusNode,
 
-            fieldType: FieldType.title,
-            label: title,
+            fieldType: FieldType.quistion,
+            label: hint ?? "نص السؤال",
 
             radius: 8.r(context),
-            controller: titleController,
+            controller: quistionController,
           ),
         ),
       ),

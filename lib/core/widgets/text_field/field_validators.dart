@@ -12,6 +12,7 @@ enum FieldType {
   degree,
   duration,
   title,
+  quistion,
 }
 
 String? validateField(FieldType type, String? value) {
@@ -97,6 +98,11 @@ String? validateField(FieldType type, String? value) {
 
       final degree = int.tryParse(value.trim());
       if (degree == null || degree > 100 || degree <= 0) return "قيمة خاطئة";
+      break;
+    case FieldType.quistion:
+      if (value == null || value.trim().isEmpty) {
+        return 'لا يجب أن يكون هذا الحقل فارغًا';
+      }
       break;
   }
 

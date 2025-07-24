@@ -42,6 +42,7 @@ class AppImages {
 
   static const String nullQuizLight = 'assets/images/svg/nullquiz_light.svg';
   static const String nullQuizDark = 'assets/images/svg/nullquiz_dark.svg';
+  static const String imageIcon = 'assets/images/icons/imageIcon.svg';
 
   static const String shareNetwork = 'assets/images/icons/share-network.svg';
 

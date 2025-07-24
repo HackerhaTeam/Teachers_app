@@ -27,7 +27,7 @@ class GroubSellector extends StatelessWidget {
               : AutovalidateMode.disabled,
       child: Center(
         child: SizedBox(
-          width: 365.w(context),
+          width: 363.w(context),
           height: 61,
           child: CustomDropdown(
             label: "اختر الكروب الذي يتبع لهذا السؤال",

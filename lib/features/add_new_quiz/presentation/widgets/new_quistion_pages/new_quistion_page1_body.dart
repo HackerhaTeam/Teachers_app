@@ -46,10 +46,10 @@ class _NewQuistionPage1BodyState extends State<NewQuistionPage1Body> {
           });
           final isFormValid = formKey.currentState?.validate() ?? false;
           final groubValidate = groubKey.currentState?.validate() ?? false;
-          final titleValidate = titleKey.currentState?.validate() ?? false;
+          // final titleValidate = titleKey.currentState?.validate() ?? false;
           final degreeValidate = degreeKey.currentState?.validate() ?? false;
-          if (groubValidate && titleValidate && degreeValidate && isFormValid) {
-            widget.onNext;
+          if (groubValidate && degreeValidate && isFormValid) {
+            widget.onNext();
           }
         },
       ),
@@ -58,18 +58,23 @@ class _NewQuistionPage1BodyState extends State<NewQuistionPage1Body> {
         child: Form(
           key: formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               IntroductionHeader(
                 introText: "بيانات السؤال الأساسية",
                 icon: PhosphorIcons.database(),
               ),
               SizedBox(height: 8),
-              Text(
-                "أدخل البيانات الرئيسية للسؤال",
-                style: context.xParagraphLargeLose.copyWith(
-                  color: content.secondary,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "أدخل البيانات الرئيسية للسؤال",
+                    style: context.xParagraphLargeLose.copyWith(
+                      color: content.secondary,
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 32),
               GroubSellector(
@@ -95,21 +100,17 @@ class _NewQuistionPage1BodyState extends State<NewQuistionPage1Body> {
                     onSubmitted: (_) {
                       final newGroupName = titleController.text.trim();
 
-                      // تحقق من الاسم
                       if (newGroupName.isNotEmpty &&
                           !userGroups.contains(newGroupName) &&
                           newGroupName != "عشوائي (لا يتبع لأي مجموعة)" &&
                           newGroupName != "مجموعة جديدة") {
                         setState(() {
                           userGroups.insert(0, newGroupName);
-
-                          // ركب القائمة النهائية
                           grobs = [
                             ...userGroups,
                             "عشوائي (لا يتبع لأي مجموعة)",
                             "مجموعة جديدة",
                           ];
-
                           selectedGroub = newGroupName;
                         });
                       }
@@ -124,16 +125,13 @@ class _NewQuistionPage1BodyState extends State<NewQuistionPage1Body> {
                   ),
                 ),
               SizedBox(height: 12),
-              Padding(
-                padding: EdgeInsets.only(right: 2),
-                child: DegreeField(
-                  width: 361.w(context),
-                  degreeController: degreeController,
-                  focusNode: degreeFocusNode,
-                  degreeKey: degreeKey,
-                  degreeSubmitted: degreeSubmitted,
-                  title: "درجة السؤال",
-                ),
+              DegreeField(
+                width: 363.w(context),
+                degreeController: degreeController,
+                focusNode: degreeFocusNode,
+                degreeKey: degreeKey,
+                degreeSubmitted: degreeSubmitted,
+                title: "درجة السؤال",
               ),
             ],
           ),

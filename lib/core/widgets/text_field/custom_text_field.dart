@@ -24,7 +24,7 @@ class CustomTextField extends StatefulWidget {
   final String? Function(String?)? customValidator;
   final void Function(String)? onFieldSubmitted;
   final void Function(String)? onChanged;
-
+  final bool? enabled;
   const CustomTextField({
     super.key,
     required this.fieldType,
@@ -43,6 +43,7 @@ class CustomTextField extends StatefulWidget {
     this.customValidator,
     this.onFieldSubmitted,
     this.onChanged,
+    this.enabled,
   });
 
   @override
@@ -70,6 +71,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       width: widget.width,
       height: widget.height,
       child: TextFormField(
+        enabled: widget.enabled ?? true,
         // autovalidateMode: AutovalidateMode.onUserInteraction,
         onChanged: widget.onChanged,
         onFieldSubmitted: widget.onFieldSubmitted,
@@ -109,7 +111,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
           contentPadding:
               widget.contentPadding ??
-              const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+              const EdgeInsets.symmetric(horizontal: 12, vertical: 18),
           labelText: widget.label,
           labelStyle: styles.xLabelSmall,
           hintText: widget.hint,
@@ -135,6 +137,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.radius),
             borderSide: BorderSide(color: backgrounds.primaryBrand),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(widget.radius),
+            borderSide: BorderSide(color: border.disabled),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.radius),

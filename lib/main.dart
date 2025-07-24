@@ -5,8 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:teacher_hackerha/core/DI/service_locator.dart';
 import 'package:teacher_hackerha/core/manager/tag_cubit/tag_cubit.dart';
 import 'package:teacher_hackerha/core/themes/app_theme.dart';
-import 'package:teacher_hackerha/features/add_new_quiz/presentation/pages/add_new_quiz_page.dart';
+import 'package:teacher_hackerha/core/widgets/pages_wrapper.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:teacher_hackerha/features/add_new_quiz/presentation/pages/add_new_quiz_page.dart';
 
 void main() {
   setupDependencies();

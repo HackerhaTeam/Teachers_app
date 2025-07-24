@@ -111,7 +111,7 @@ class _NewQuizPageBodyState extends State<NewQuizPageBody> {
                   ),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     DegreeField(
                       onSubmitted: (p0) {
