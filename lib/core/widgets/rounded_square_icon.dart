@@ -1,50 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:teacher_hackerha/core/functions/get_responsive_size.dart';
 import 'package:teacher_hackerha/core/themes/extentions/app_backgrounds.dart';
-import 'package:teacher_hackerha/core/themes/extentions/app_content.dart';
 import 'package:teacher_hackerha/core/widgets/custom_card.dart';
 
-
-class RoundedSquareIcon extends StatelessWidget {
-  const RoundedSquareIcon({
+class RoundedSquareShape extends StatelessWidget {
+  const RoundedSquareShape({
     super.key,
-    required this.icon,
     this.gradient,
-    this.iconSize,
-    this.size,  this.color,  this.iconColor,
+    this.size,
+    this.color,
+  required this.child,
   });
-  final double? iconSize;
-  final IconData icon;
   final double? size;
   final Gradient? gradient;
   final Color? color;
-  final Color? iconColor;
+ 
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     final backgroundColor = Theme.of(context).extension<AppBackgrounds>()!;
-    final contentColor = Theme.of(context).extension<AppContent>()!;
     return Stack(
       alignment: AlignmentDirectional.center,
       children: [
         Container(
-          width:size==null? 44.w(context):size!.w(context)+4.w(context),
-          height: size==null? 44.w(context):size!.w(context)+4.w(context),
+          width: size == null ? 44.w(context) : size!.w(context) + 4.w(context),
+          height:
+              size == null ? 44.w(context) : size!.w(context) + 4.w(context),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16.r(context)),
-              gradient: gradient),
+            borderRadius: BorderRadius.circular(16.r(context)),
+            gradient: gradient,
+          ),
         ),
         CustomCard(
-          width: size==null? 40.w(context):size!.w(context),
-          height: size==null? 40.w(context):size!.w(context),
+          width: size == null ? 40.w(context) : size!.w(context),
+          height: size == null ? 40.w(context) : size!.w(context),
           borderRadius: 16.r(context),
-          backgroundColor: color?? backgroundColor.primaryBrand,
-          child: PhosphorIcon(
-            textDirection: TextDirection.ltr,
-            icon,
-            color: iconColor?? contentColor.primaryInverted,
-            size: iconSize ?? 16.w(context),
-          ),
+          backgroundColor: color ?? backgroundColor.primaryBrand,
+          child: Center(child: child)
         ),
       ],
     );

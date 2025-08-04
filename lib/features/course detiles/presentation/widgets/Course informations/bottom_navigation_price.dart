@@ -9,7 +9,6 @@ import 'package:teacher_hackerha/core/widgets/rounded_square_icon.dart';
 import 'package:teacher_hackerha/features/course%20detiles/presentation/widgets/Course%20informations/course_info_price.dart';
 import 'package:teacher_hackerha/features/course%20detiles/presentation/widgets/Course%20informations/floating_active_course_button.dart';
 
-
 class BottomNavigationPrice extends StatelessWidget {
   const BottomNavigationPrice({
     super.key,
@@ -25,29 +24,33 @@ class BottomNavigationPrice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomCard(
-        borderColor: border.transparent,
-        width: double.infinity,
-        height: 90,
-        backgroundColor: background.surfacePrimary,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            
-            RoundedSquareIcon(
-              icon: PhosphorIcons.shoppingCartSimple(),
-              color: background.onSurfaceSecondary,
-              gradient: LinearGradient(colors: [border.transparent,border.transparent]),
-              iconColor: content.primary,
-              size: 56,
-              iconSize: 22,
+      borderColor: border.transparent,
+      width: double.infinity,
+      height: 90,
+      backgroundColor: background.surfacePrimary,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          RoundedSquareShape(
+            color: background.onSurfaceSecondary,
+            gradient: LinearGradient(
+              colors: [border.transparent, border.transparent],
             ),
-            SizedBox(width: 8.w(context)),
-            CourseInfoPriceView(content: content),
-            SizedBox(width: 20.w(context)),
-            ActiveCourseButton(width: 184.w(context)),
-          ],
-        ),
-      );
+
+            size: 56,
+            child: PhosphorIcon(
+              PhosphorIcons.shoppingCartSimple(),
+              color: content.primary,
+              size: 22,
+            ),
+          ),
+          SizedBox(width: 8.w(context)),
+          CourseInfoPriceView(content: content),
+          SizedBox(width: 20.w(context)),
+          ActiveCourseButton(width: 184.w(context)),
+        ],
+      ),
+    );
   }
 }

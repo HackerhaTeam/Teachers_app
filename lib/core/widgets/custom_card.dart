@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard(
-      {super.key,
-      this.child,
-       this.backgroundColor,
-      this.width,
-      this.height,
-      this.borderColor,
-      this.borderRadius = 12, this.padding, this.margin, this.alignment});
+  const CustomCard({
+    super.key,
+    this.child,
+    this.backgroundColor,
+    this.width,
+    this.height,
+    this.borderColor,
+    this.borderRadius = 12,
+    this.padding,
+    this.margin,
+    this.alignment,
+    this.thicknessBorder,
+  });
   final Widget? child;
   final Color? backgroundColor;
   final double? width;
@@ -18,19 +23,24 @@ class CustomCard extends StatelessWidget {
   final double borderRadius;
   final AlignmentGeometry? alignment;
   final EdgeInsetsGeometry? margin;
+  final double? thicknessBorder;
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment:alignment ,
+      alignment: alignment,
       margin: margin,
       padding: padding,
       decoration: BoxDecoration(
-          border: Border.all(color: borderColor ?? Colors.transparent,
-          width: 0),
-          color: backgroundColor,
-          borderRadius: BorderRadius.circular(borderRadius)),
+        border: Border.all(
+          color: borderColor ?? Colors.transparent,
+          width: thicknessBorder ?? 1,
+        ),
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(borderRadius),
+      ),
       width: width,
       height: height,
       child: child,
     );
-  }}
+  }
+}

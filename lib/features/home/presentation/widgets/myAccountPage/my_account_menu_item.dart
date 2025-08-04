@@ -26,7 +26,7 @@ class MyAccountMenuItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              RoundedSquareIcon(icon: icon,),
+              RoundedSquareShape(child:PhosphorIcon(icon),),
               SizedBox(width: 16.w(context)),
               Text(title, style: context.xHeadingSmall),
               const Spacer(),

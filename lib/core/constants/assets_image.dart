@@ -70,6 +70,8 @@ class AppImages {
 
   static const String bookmarkSimple = 'assets/images/icons/bookmark-simple.svg';
   static const String starFill = 'assets/images/icons/star-fill.svg';
+  static const String dotsThreeVirticalLight = 'assets/images/svg/dots_three_vertical_light.svg';
+  static const String dotsThreeVirticalDark = 'assets/images/svg/dots_three_vertical_dark.svg';
 
 
 }

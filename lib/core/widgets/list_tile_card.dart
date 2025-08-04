@@ -36,8 +36,7 @@ class ListTileCard extends StatelessWidget {
             vertical: 16.h(context), horizontal: 16.w(context)),
         child: Row(
           children: [
-            RoundedSquareIcon(
-              icon: PhosphorIcons.exam(),
+            RoundedSquareShape(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -46,6 +45,7 @@ class ListTileCard extends StatelessWidget {
                   borderColor.containerOutlineEnd,
                 ],
               ),
+              child: PhosphorIcon( PhosphorIcons.exam()),
             ),
             SizedBox(width: 8.w(context)),
             ListTileCardDetails(

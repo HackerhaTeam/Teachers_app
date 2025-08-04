@@ -35,11 +35,11 @@ class BottomSheetPrice extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 20.w(context),),
-            RoundedSquareIcon(
-              icon: PhosphorIcons.shoppingCartSimple(),
+            RoundedSquareShape(
               color: background.onSurfaceSecondary,
               gradient: LinearGradient(colors: [border.transparent]),
-              iconColor: content.primary,
+              child:PhosphorIcon( PhosphorIcons.shoppingCartSimple(),color:  content.primary,),
+              
             ),
             Padding(
               padding:  EdgeInsets.only(top:22,bottom: 22,right: 8.w(context) ),
