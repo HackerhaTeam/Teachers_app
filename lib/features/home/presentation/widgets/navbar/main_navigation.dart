@@ -7,6 +7,8 @@ import 'package:teacher_hackerha/features/home/presentation/pages/account_tab_pa
 import 'package:teacher_hackerha/features/home/presentation/pages/home_page_.dart';
 import 'package:teacher_hackerha/features/home/presentation/widgets/drawer/my_drawer.dart';
 import 'package:teacher_hackerha/features/home/presentation/widgets/navbar/animated_navbar.dart';
+import 'package:teacher_hackerha/features/questions/presentation/pages/question_page.dart';
+import 'package:teacher_hackerha/features/questions/presentation/widget/question_page_body.dart';
 class MainNavigationPage extends StatefulWidget {
   const MainNavigationPage({super.key});
 
@@ -52,44 +54,45 @@ class _MainNavigationPageState extends State<MainNavigationPage>
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: _iconCubit,
-      child: ThemeSwitchingArea(
-        child: Scaffold(
-              onDrawerChanged: (isOpened) {
+      child: QuestionPage(),
+      // child: ThemeSwitchingArea(
+      //   child: Scaffold(
+      //         onDrawerChanged: (isOpened) {
              
 
-            },
-          drawer: MyDrawer(
-                animationController: _iconCubit.controller,
-                onThemeChanged: () {
-                  if (_scaffoldKey.currentState?.isEndDrawerOpen ?? false) {
-                    _scaffoldKey.currentState?.openEndDrawer();
-                  }
-                },
-              ),
+      //       },
+      //     drawer: MyDrawer(
+      //           animationController: _iconCubit.controller,
+      //           onThemeChanged: () {
+      //             if (_scaffoldKey.currentState?.isEndDrawerOpen ?? false) {
+      //               _scaffoldKey.currentState?.openEndDrawer();
+      //             }
+      //           },
+      //         ),
             
-              key: _scaffoldKey,
+      //         key: _scaffoldKey,
             
-              body: PageView(
-                controller: _pageController,
-                physics: const ClampingScrollPhysics(),
-                children: _pages,
-                onPageChanged: (index) {
-                  setState(() {
-                    _currentIndex = index;
-                  });
-                },
-              ),
-              bottomNavigationBar: AnimatedBottomNavBar(
-                currentIndex: _currentIndex,
-                onTap: (newIndex) {
-                  setState(() {
-                    _currentIndex = newIndex;
-                  });
-                  _pageController.jumpToPage(newIndex);
-                },
-              ),
-            ),
-      ),
+      //         body: PageView(
+      //           controller: _pageController,
+      //           physics: const ClampingScrollPhysics(),
+      //           children: _pages,
+      //           onPageChanged: (index) {
+      //             setState(() {
+      //               _currentIndex = index;
+      //             });
+      //           },
+      //         ),
+      //         bottomNavigationBar: AnimatedBottomNavBar(
+      //           currentIndex: _currentIndex,
+      //           onTap: (newIndex) {
+      //             setState(() {
+      //               _currentIndex = newIndex;
+      //             });
+      //             _pageController.jumpToPage(newIndex);
+      //           },
+      //         ),
+      //       ),
+      // ),
     );
   }
 }
